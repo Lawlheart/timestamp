@@ -1,7 +1,7 @@
 'use strict';
 
 var path = process.cwd();
-var TimeStamp = require(path + '/app/controllers/timestamp.server.js');
+var TimeStamp = require(path + '/controllers/timestamp.server.js');
 
 module.exports = function (app, passport) {
 
