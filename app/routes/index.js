@@ -1,4 +1,5 @@
 'use strict';
+var cors = require('cors');
 
 var path = process.cwd();
 var TimeStamp = require(path + '/app/controllers/timestamp.server.js');
@@ -13,5 +14,5 @@ module.exports = function (app, passport) {
 		});
 
 	app.route('/:data')
-		.get(timestamp.check)
+		.get(cors(), timestamp.check)
 };
