@@ -1,39 +1,36 @@
 <!DOCTYPE html>
-
 <html>
-
-	<head>
-		<title>Clementine.js - The elegant and lightweight full stack JavaScript boilerplate.</title>
-		
-		<link href="/public/css/main.css" rel="stylesheet" type="text/css">
-	</head>
-
+<head>
+	<title>Timestamp Microservice</title>
+	<link href="/public/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
 	<header>
-		<p>Welcome, <span id="display-name"></span>!</p>
-		<a class="menu" href="/profile">Profile</a>
-		<p>|</p>
-		<a class="menu" href="/logout">Logout</a>
+		<p>Welcome to my Timestamp Microservice!</p>
 	</header>
 
-	<body>
-		<div class="container">
-			<img src="/public/img/clementine_150.png" />
-			<br />
-			<p class="clementine-text">Clementine.js</p>
-		</div>
-	
-		<div class="container">
-			<p>You have clicked the button <span id="click-nbr"></span> times.</p>
-			<br />
-			<div class="btn-container">
-				<button type="submit" class="btn btn-add">CLICK ME!</button>
-				<button class="btn btn-delete">RESET</button>
-			</div>
-		</div>
-		
-		<script type="text/javascript" src="common/ajax-functions.js"></script>
-		<script type="text/javascript" src="controllers/clickController.client.js"></script>
-		<script type="text/javascript" src="controllers/userController.client.js"></script>
-	</body>
+	<main class="container">
+		<h4>User Stories</h4>
+		<ul>
+			<li>I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016).</li>
+			<li>If it does, it returns both the Unix timestamp and the natural language form of that date.</li>
+			<li>If it does not contain a date or Unix timestamp, it returns null for those properties.</li>
+		</ul>
+		<h4>Example Usage</h4>
+		<ul>
+			<li><code>https://timestamp-lawlietblack.herokuapp.com/February%2016,%202016</code></li><br>
+			<li><code>https://timestamp-lawlietblack.herokuapp.com/1455609600</code></li>
+		</ul>
+		<h4>Example Output</h4>
+		<ul>
+			<li><code>{ "unix": 1455609600, "natural": "February 16, 2016" }</code></li>
+		</ul>
+	</main>
 
+	<footer>
+		<p class="sig-text">Code by <a href="http://lawlietblack.com">Kenneth Black</a></p>
+		<p class="clementine-text">Powered by Clementine.js<img src="/public/img/clementine_150.png" /></p>
+	</footer>
+
+</body>
 </html>
