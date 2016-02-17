@@ -8,9 +8,7 @@ var session = require('express-session');
 
 var app = express();
 
-if(process.env.COMPUTERNAME === 'FORGE') {
-  require('dotenv').load();
-}
+
 require('./app/config/passport')(passport);
 
 mongoose.connect(process.env.MONGO_URI);
