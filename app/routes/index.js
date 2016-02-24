@@ -1,8 +1,7 @@
 'use strict';
-var cors = require('cors');
 
-var path = process.cwd();
-var TimeStamp = require(path + '/app/controllers/timestamp.server.js');
+var cors = require('cors');
+var TimeStamp = require(process.cwd() + '/app/controllers/timestamp.server.js');
 
 module.exports = function (app, passport) {
 
@@ -10,7 +9,7 @@ module.exports = function (app, passport) {
 
 	app.route('/')
 		.get(function (req, res) {
-			res.sendFile(path + '/public/index.html');
+			res.sendFile(process.cwd() + '/public/index.html');
 		});
 
 	app.route('/:data')
